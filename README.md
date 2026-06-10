@@ -52,22 +52,24 @@ Prediction
 
 ---
 
-##  Dataset
+## Dataset
 
 Dataset Used:
 
 Augmented Alzheimer's MRI Dataset
 
-Classes:
+### Dataset Distribution
 
 | Class | Images |
-|---------|---------|
-| Mild Demented | 896 |
-| Moderate Demented | 64 |
-| Non Demented | 3200 |
-| Very Mild Demented | 2240 |
+|---------|---------:|
+| Mild Demented | 8,960 |
+| Moderate Demented | 6,464 |
+| Non Demented | 9,600 |
+| Very Mild Demented | 8,960 |
 
-Total Images: 6400+
+### Total Images
+
+33,984 MRI Images
 
 ---
 
