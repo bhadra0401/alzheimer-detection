@@ -1,222 +1,164 @@
 #  Transfer Learning Framework for Early Alzheimer's Disease Prediction
 
-A Deep Learning and Ensemble Machine Learning framework for early detection of Alzheimer's Disease using Brain MRI images.
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.21-orange?logo=tensorflow)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-red?logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![Accuracy](https://img.shields.io/badge/Ensemble_Accuracy-97.7%25-brightgreen)
+
+</p>
+
+<p align="center">
+  <a href="https://huggingface.co/spaces/bhadra0401/alzheimer-detection">
+    <img src="https://img.shields.io/badge/_Live_Demo-Try_Now-success?style=for-the-badge">
+  </a>
+</p>
 
 ---
 
-##  Project Overview
+##  Overview
 
-This project utilizes Transfer Learning with MobileNetV2 and ResNet50 to extract deep features from MRI scans and combines multiple machine learning models through Ensemble Learning for highly accurate Alzheimer's disease classification.
+A healthcare-focused AI system that detects Alzheimer's Disease stages from Brain MRI scans using Transfer Learning and Ensemble Machine Learning.
 
-The system classifies MRI scans into:
+### Classification Categories
 
-- Mild Demented
-- Moderate Demented
-- Non Demented
-- Very Mild Demented
-
----
-
-##  Objectives
-
-- Early Alzheimer's detection
-- Deep feature extraction using pre-trained CNN models
-- Ensemble Machine Learning classification
-- Healthcare-focused predictive analytics
-- Streamlit deployment for real-time predictions
+* Mild Demented
+* Moderate Demented
+* Non Demented
+* Very Mild Demented
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.21-orange)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![Accuracy](https://img.shields.io/badge/Accuracy-97.7%25-brightgreen)
-
-## Project Architecture
+##  Architecture
 
 ```text
-MRI Image
-    ↓
+MRI Scan
+   ↓
 Image Preprocessing
-    ↓
+   ↓
 MobileNetV2 / ResNet50
-    ↓
+   ↓
 Deep Feature Extraction
-    ↓
+   ↓
 SVM + Random Forest + Gradient Boosting
-    ↓
+   ↓
 Voting Ensemble
-    ↓
+   ↓
 Prediction
 ```
 
 ---
 
-## Dataset
+##  Dataset
 
-Dataset Used:
+**Dataset:** Augmented Alzheimer's MRI Dataset
 
-Augmented Alzheimer's MRI Dataset
+| Class              | Images |
+| ------------------ | -----: |
+| Mild Demented      |  8,960 |
+| Moderate Demented  |  6,464 |
+| Non Demented       |  9,600 |
+| Very Mild Demented |  8,960 |
 
-### Dataset Distribution
-
-| Class | Images |
-|---------|---------:|
-| Mild Demented | 8,960 |
-| Moderate Demented | 6,464 |
-| Non Demented | 9,600 |
-| Very Mild Demented | 8,960 |
-
-### Total Images
-
-33,984 MRI Images
+**Total Images:** 33,984 MRI Scans
 
 ---
 
-##  Deep Learning Models
+##  Models Used
 
-### MobileNetV2
+### Deep Learning
 
-- Transfer Learning
-- Fine Tuning
-- Input Size: 224x224
+* MobileNetV2 (Transfer Learning + Fine-Tuning)
+* ResNet50 (Transfer Learning + Fine-Tuning)
 
-Results:
+### Machine Learning
 
-- Training Accuracy: 95.8%
-- Validation Accuracy: 95.3%
-
----
-
-### ResNet50
-
-- Transfer Learning
-- Fine Tuning
-
----
-
-##  Ensemble Learning Models
-
-- Support Vector Machine (SVM)
-- Random Forest
-- Gradient Boosting
-- Voting Ensemble Classifier
-
-Results:
-
-| Model | Accuracy |
-|---------|---------|
-| SVM | 97.70% |
-| Random Forest | 97.39% |
-| Gradient Boosting | 97.46% |
-| Ensemble | 97.70% |
-
----
-
-##  Technologies Used
-
-- Python
-- TensorFlow
-- Keras
-- Scikit-Learn
-- NumPy
-- Pandas
-- OpenCV
-- Streamlit
-
----
-
-##  Application Screenshots
-
-## Home Page
-
-![Home Page](screenshots/home_page.png)
-
----
-
-## Prediction Result
-
-![Prediction Result](screenshots/prediction_result.png)
-
----
-
-## Prediction Analysis
-
-![Prediction Analysis](screenshots/prediction_analysis.png)
-
----
-
-## Prediction Analysis
-
-![Prediction Analysis](screenshots/prediction_report.png)
-
----
-
-
-##  Installation
-
-Clone Repository
-
-```bash
-git clone https://github.com/bhadra0401/Alzheimer_Project.git
-```
-
-Move into Project
-
-```bash
-cd Alzheimer_Project
-```
-
-Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate Environment
-
-```bash
-venv\Scripts\activate
-```
-
-Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run Application
-
-```bash
-streamlit run app.py
-```
+* Support Vector Machine (SVM)
+* Random Forest
+* Gradient Boosting
+* Voting Ensemble Classifier
 
 ---
 
 ##  Results
 
-Final Ensemble Accuracy:
-
-97.70%
-
-Validation Accuracy (MobileNetV2):
-
-95.32%
+| Model                  |   Accuracy |
+| ---------------------- | ---------: |
+| MobileNetV2 Validation |     95.32% |
+| SVM                    |     97.70% |
+| Random Forest          |     97.39% |
+| Gradient Boosting      |     97.46% |
+| Ensemble Voting        | **97.70%** |
 
 ---
 
-##  Future Enhancements
+##  Application Screenshots
 
-- Grad-CAM Visualization
-- Explainable AI (XAI)
-- PDF Report Generation
-- Cloud Deployment
-- Multi-Patient Dashboard
+### Home Page
+
+![Home Page](screenshots/home_page.png)
+
+### Prediction Result
+
+![Prediction Result](screenshots/prediction_result.png)
+
+### Prediction Analysis
+
+![Prediction Analysis](screenshots/prediction_analysis.png)
+
+### Prediction Report
+
+![Prediction Report](screenshots/prediction_report.png)
+
+---
+
+##  Run Locally
+
+```bash
+git clone https://github.com/bhadra0401/Alzheimer_Project.git
+
+cd Alzheimer_Project
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+streamlit run app.py
+```
+
+---
+
+##  Tech Stack
+
+* Python
+* TensorFlow
+* Keras
+* Scikit-Learn
+* NumPy
+* Pandas
+* OpenCV
+* Streamlit
+
+---
+
+##  Future Improvements
+
+* Grad-CAM Visualization
+* Explainable AI (XAI)
+* PDF Report Generation
+* Cloud Deployment
+* Multi-Patient Dashboard
 
 ---
 
 ##  Author
 
-Naga Veera Bhadra Kumar Akkala
+**Naga Veera Bhadra Kumar Akkala**
 
-Data Science | Machine Learning | Deep Learning
+Data Science • Machine Learning • Deep Learning
+
+⭐ If you found this project useful, consider giving it a star.
