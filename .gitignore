@@ -19,4 +19,4 @@ features/*.npy
 
 data/
 ###AugmentedAlzheimerDataset/
-OriginalDataset/
+###OriginalDataset/
