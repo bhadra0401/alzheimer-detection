@@ -18,5 +18,5 @@ models/*.pkl
 features/*.npy
 
 data/
-AugmentedAlzheimerDataset/
+###AugmentedAlzheimerDataset/
 OriginalDataset/
